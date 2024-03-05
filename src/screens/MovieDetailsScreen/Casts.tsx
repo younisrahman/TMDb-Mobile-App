@@ -43,7 +43,6 @@ export const Casts: React.FC<CastsProps> = () => {
           parallaxScrollingScale: 0.9,
           parallaxScrollingOffset: 250,
         }}
-        onSnapToItem={index => console.log('current index:', index)}
         renderItem={({index}) => <CastCard data={casts && casts[index]} />}
       />
     </View>
