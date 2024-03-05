@@ -5,7 +5,11 @@ import {wp} from '@utils';
 import {FontFamily} from '@config';
 
 interface CastCardProps {
-  data?: any; // Change the type accordingly
+  data?: {
+    profile_path?: string;
+    original_name?: string;
+    character?: string;
+  };
 }
 
 const CastCard: React.FC<CastCardProps> = ({data}) => {
@@ -22,9 +26,9 @@ const CastCard: React.FC<CastCardProps> = ({data}) => {
       />
       <View style={styles.textContainer}>
         <Text numberOfLines={2} style={styles.nameText}>
-          {data.original_name}
+          {data?.original_name}
         </Text>
-        <Text numberOfLines={2}>{data.character}</Text>
+        <Text numberOfLines={2}>{data?.character}</Text>
       </View>
     </View>
   );
